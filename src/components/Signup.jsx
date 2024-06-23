@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import authService from '../appwrite/auth'
 import {Link ,useNavigate} from 'react-router-dom'
-import {login} from '../store/authSlice.js'
+import {login} from '../store/authSlice'
 import {Button, Input, Logo} from './index.js'
 import {useDispatch} from 'react-redux'
 import {useForm} from 'react-hook-form'
@@ -74,7 +74,7 @@ function Signup() {
                         {...register("password", {
                             required: true,})}
                         />
-                        <Button type="submit" className="w-full hover:bg-blue-800">
+                        <Button type="submit" className="w-full">
                             Create Account
                         </Button>
                     </div>
